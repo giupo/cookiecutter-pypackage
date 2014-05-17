@@ -5,7 +5,7 @@ Feature: Compute factorial
 
   Scenario: Factorial of 0
     Given I have the number 0
-    When I computer its factorial
+    When I compute its factorial
     Then I see the number 1
     
   Scenario: Factorial of 1
