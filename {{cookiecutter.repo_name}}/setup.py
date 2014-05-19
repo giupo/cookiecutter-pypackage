@@ -27,6 +27,7 @@ requirements = [
 ]
 
 test_requirements = [
+    'pytest'
     # TODO: put package test requirements here
 ]
 
