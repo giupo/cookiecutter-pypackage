@@ -4,11 +4,19 @@
 import os
 import sys
 
+from setuptools import setup
+from setuptools.command.test import test as TestCommand
 
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
+class PyTest(TestCommand):
+    def finalize_options(self):
+        TestCommand.finalize_options(self)
+        self.test_args = []
+        self.test_suite = True
+
+    def run_tests(self):
+        import pytest
+        errcode = pytest.main(self.test_args)
+        sys.exit(errcode)
 
 
 readme = open('README.rst').read()
@@ -51,6 +59,7 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
     ],
+    cmdclass={'test': PyTest},
     test_suite='tests',
     tests_require=test_requirements
 )
