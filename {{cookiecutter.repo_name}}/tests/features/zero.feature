@@ -5,8 +5,9 @@ Feature: Compute factorial
 
   Scenario Outline: Factorial of a number
     Given I have the <number>
-    When I compute its factorial
-    Then I see the <result>
+    And I have the <result>
+    When I compute it
+    Then I see the result is equal to <result>
 
     Examples:
     | number |        result |
