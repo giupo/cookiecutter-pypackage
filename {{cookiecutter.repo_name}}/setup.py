@@ -28,8 +28,13 @@ requirements = [
 ]
 
 test_requirements = [
-    'pytest'
-    # TODO: put package test requirements here
+    'pytest',
+    'pytest-cov',
+    'pytest-bdd',
+    'pytest-xdist',
+    'pytest-watch',
+    'tox',
+    'detox'
 ]
 
 setup(

@@ -31,7 +31,7 @@ test:
 	python setup.py test
 
 test-all:
-	tox
+	detox
 
 coverage:
 	coverage run --source {{ cookiecutter.repo_name }} setup.py test
