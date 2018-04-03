@@ -44,7 +44,7 @@ setup(
     author='{{ cookiecutter.full_name }}',
     author_email='{{ cookiecutter.email }}',
     url='https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}',
-    packages=find_pacakges(exclude=["tests"]),
+    packages=find_packages(exclude=["tests"]),
     include_package_data=True,
     install_requires=requirements,
     license="BSD",
